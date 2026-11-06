@@ -374,7 +374,7 @@ async fn forward_with_timing_isolation(
     // Unbounded = TLS reader never waits for container consumption speed
     let (sender, receiver) = mpsc::unbounded_channel::<Vec<u8>>();
 
-    info!("Starting timing-isolated data forwarding (TLS encrypted)");
+    info!("Starting timing-isolated data forwarding (TLS encrypted) [PRIVATE-BUILD-MARKER]");
 
     // Spawn both tasks concurrently
     let tls_task = tokio::spawn(tls_to_channel_reader(tls_read, sender));
